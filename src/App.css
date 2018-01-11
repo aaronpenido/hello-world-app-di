@@ -26,3 +26,21 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+.body-content {
+  padding-left: 125px;
+}
+
+.container {
+  width: 1170px;
+}
+
+.img-responsive, .thumbnail a>img, .thumbnail>img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.page-separator {
+  margin-bottom: 8px;
+}
