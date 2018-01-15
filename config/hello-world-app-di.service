@@ -8,7 +8,7 @@
     Restart=always
     RestartSec=10
     SyslogIdentifier=hello-world-app-di_service
-    User=aaronpenido
+    User=vagrant
 
     [Install]
     WantedBy=multi-user.target

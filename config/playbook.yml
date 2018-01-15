@@ -9,7 +9,7 @@
 - hosts: all
   become: yes
   vars:
-    - provision_path: /home/{{ ansible_ssh_user }}/hell-world-app-di-provision
+    - provision_path: /home/{{ ansible_ssh_user }}/hello-world-app-di-provision
     - app_name: HelloWorldAppDI
     - publish_path: /var/hello-world-app-di
     - service_name: hello-world-app-di.service
@@ -71,6 +71,10 @@
     npm:
       name: publish-react-app
       global: yes
+
+  - name: "Npm install"
+    npm:
+      path={{ provision_path }}
 
   - name: "Stop/Disable service: {{ service_name }}" 
     command: systemctl stop {{ service_name }}
