@@ -58,7 +58,21 @@
       state=present
       regexp='.*\%user%$'
       line="User={{ ansible_ssh_user }}"
-  
+
+  - name: Install npm
+     apt: name={{ item }} state=present
+     with_items:
+       - npm
+
+  - name: "Install React Dependencies"
+    npm: name={{ item }}
+    with_items: 
+      - create-react-app
+      - publish-react-app
+
+  - name: "Execute create-react-app"
+    command: publish-react-app hello-world-app-di
+
   - name: "Stop/Disable service: {{ service_name }}" 
     command: systemctl stop {{ service_name }}
   - command: systemctl disable {{ service_name }}
