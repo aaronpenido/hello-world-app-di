@@ -1,0 +1,14 @@
+[Unit]
+    Description=Run Hello-World-App-Di service
+
+    [Service]
+    ExecStart=/var/hello-world-app-di/startup.sh
+    ReadWriteDirectories=/home/aaronpenido/hello-world-app-di
+    WorkingDirectory=/home/aaronpenido/hello-world-app-di
+    Restart=always
+    RestartSec=10
+    SyslogIdentifier=hello-world-app-di_service
+    User=aaronpenido
+
+    [Install]
+    WantedBy=multi-user.target
