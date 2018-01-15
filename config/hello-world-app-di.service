@@ -3,8 +3,8 @@
 
     [Service]
     ExecStart=/var/hello-world-app-di/startup.sh
-    ReadWriteDirectories=/home/aaronpenido/hello-world-app-di
-    WorkingDirectory=/home/aaronpenido/hello-world-app-di
+    ReadWriteDirectories=/home/vagrant/hell-world-app-di-provision/
+    WorkingDirectory=/home/vagrant/hell-world-app-di-provision/
     Restart=always
     RestartSec=10
     SyslogIdentifier=hello-world-app-di_service
